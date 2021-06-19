@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+
+  //umesto state pisemo ovo dole tako sto bi name se nalazio u state u changeName bi bila funkcija. Moramo da importujemo usestate
+  const [name, changeName] = useState("")
+
+  return(
+    <div className="containter text-center">
+      <h1>{name}</h1>
+      <input type="text" onChange={(event) => {changeName(event.target.value)}}/>
     </div>
-  );
+  )
 }
+
 
 export default App;
