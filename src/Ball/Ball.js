@@ -11,7 +11,9 @@ function Ball(){
 
     function moveBall(){
         //prevPossition radi tako sto uzima vrednosti koje su prethodno bile
+        //u ovom slucaju da je bilo position + 20 on bi se povecavao za 20 a ovako on se povecava za 100 jer on u useState bukvalno upisuje vrednosti
         for (let i = 0; i < 5; i++) {
+            
             moveRight((prevPossition)=>{return prevPossition + 20});    
         }
     }
