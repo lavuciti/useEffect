@@ -9,7 +9,8 @@ function Users2(){
         useEffect(()=>{
             console.log("Rendering");
 
-            //u svakom trenutku kada se promeni display tada se pokrece ova funkcija
+            //kada se pokrene aplikacija u consoli ce se videti rendering a nece se videti component unmounted
+            //u svakom trenutku kada se promeni display tada se pokrece ova funkcija i rendering
             return ()=>{
                 console.log("Component unmounted");
             }
